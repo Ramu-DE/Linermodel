@@ -19,6 +19,24 @@ flowchart LR
     I --> J[Evaluate once on held-out data]
     A --> K{Continuous or class target?}
     K -- class --> L[Logistic regression: probabilities then threshold]
+
+    %% Beyond core linear models
+    D --> M{Relationship non-linear?}
+    M -- curves/interactions --> N[Feature engineering: polynomials & splines - nb 07]
+    N --> I
+    C --> O{Assumptions violated?}
+    O -- outliers --> P[Robust: Huber / RANSAC / Theil-Sen - nb 08]
+    O -- counts / positive-skew / quantiles --> Q[GLMs & QuantileRegressor - nb 08]
+    P --> J
+    Q --> J
+    E -- uncertainty / auto-relevance / scale / paths --> R[Advanced linear: Bayesian, ARD, SGD, LARS/OMP, multi-task - nb 09]
+    R --> I
+    M -- strong non-linearity --> S[Tree ensembles: RF / GB / HistGB - nb 10]
+    M -- strong non-linearity --> T[Neural network MLP - nb 12]
+    S --> J
+    T --> J
+    A --> U{Have labels?}
+    U -- no labels --> V[Unsupervised: scale -> PCA -> KMeans - nb 11]
 ```
 
 ## Start here
@@ -40,8 +58,14 @@ Open the executed notebooks in [`notebooks/`](notebooks/):
 | `04_elasticnet.ipynb` | ElasticNet | L1/L2 balance for correlated predictors |
 | `05_logistic_regression.ipynb` | Classification | Sigmoid, probabilities, threshold, confusion matrix |
 | `06_assumptions_and_diagnostics.ipynb` | Diagnostics | Residual patterns and multicollinearity |
+| `07_feature_engineering_polynomials_splines.ipynb` | Feature engineering | Polynomials, interactions, splines; under/overfit chosen by CV |
+| `08_robust_glm_quantile.ipynb` | Robust regression & GLMs | Huber/RANSAC/Theil-Sen, Poisson & Gamma/Tweedie GLMs, QuantileRegressor |
+| `09_advanced_linear_models.ipynb` | Advanced linear models | BayesianRidge/ARD, SGD, LARS/LassoLars/OMP, MultiTask Lasso/ElasticNet |
+| `10_tree_ensembles.ipynb` | Trees & ensembles | Decision tree → random forest → gradient/HistGradientBoosting; importance caveats |
+| `11_unsupervised_learning.ipynb` | Unsupervised | Scaling → PCA explained variance → KMeans with cluster-evaluation caveats |
+| `12_neural_networks_mlp.ipynb` | Neural networks | MLP classifier & regressor, scaling, convergence curves, tuning caveats |
 
-All notebooks were executed in the included `linear-models` kernel and store their charts directly in notebook outputs.
+The lessons progress from core linear models (00–06) into feature engineering, robust/GLM/quantile methods, advanced linear estimators, tree ensembles, unsupervised learning, and neural networks (07–12). All notebooks were executed in the included `linear-models` kernel and store their charts directly in notebook outputs.
 
 ## Key practices
 
