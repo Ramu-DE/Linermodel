@@ -1,0 +1,50 @@
+LINEAR MODELS - QUICK REFERENCE
+================================
+
+MODEL SELECTION GUIDE
+---------------------
+
+Need to predict a NUMBER? → Linear Regression
+Need to predict a CATEGORY? → Logistic Regression
+Too many features? → Ridge or Lasso
+Want feature selection? → Lasso
+Want stability? → Ridge
+
+FORMULAS
+--------
+
+Linear: y = mx + b
+Logistic: p = 1/(1 + e^-(mx+b))
+
+WHEN TO USE WHAT
+----------------
+
+Linear Regression:
+✓ House prices
+✓ Sales forecasting  
+✓ Temperature prediction
+✓ Any continuous number
+
+Ridge Regression:
+✓ Many correlated features
+✓ Preventing overfitting
+✓ Stable predictions
+
+Lasso Regression:
+✓ Feature selection
+✓ Sparse models
+✓ Interpretability
+
+Logistic Regression:
+✓ Spam detection
+✓ Disease diagnosis
+✓ Fraud detection
+✓ Any yes/no decision
+
+RUN THE TUTORIALS
+-----------------
+
+python tutorial_part1_basics.py
+python tutorial_part2_house_prices.py
+python tutorial_part3_regularization.py
+python tutorial_part4_logistic.py

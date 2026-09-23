@@ -1,0 +1,56 @@
+LINEAR MODELS - BEGINNER'S GUIDE
+=================================
+
+WHAT YOU HAVE:
+--------------
+4 Python tutorial files with code and visualizations
+
+HOW TO USE:
+-----------
+1. Install requirements: pip install numpy matplotlib scikit-learn
+2. Run files in order:
+   - python tutorial_part1_basics.py
+   - python tutorial_part2_house_prices.py
+   - python tutorial_part3_regularization.py
+   - python tutorial_part4_logistic.py
+
+WHAT EACH FILE TEACHES:
+------------------------
+
+Part 1: Linear Regression Basics
+- What is linear regression?
+- How it finds the best line
+- Simple visualization
+
+Part 2: House Price Prediction
+- Real-world example
+- Predicting prices from house size
+- Understanding predictions
+
+Part 3: Regularization (Ridge & Lasso)
+- Preventing overfitting
+- Ridge vs Lasso comparison
+- When to use each
+
+Part 4: Logistic Regression
+- Classification (categories, not numbers)
+- Decision boundaries
+- Spam detection, disease diagnosis, etc.
+
+QUICK CONCEPTS:
+---------------
+
+Linear Regression: Predicts NUMBERS
+- House prices, temperatures, sales
+- Formula: y = mx + b
+
+Logistic Regression: Predicts CATEGORIES  
+- Spam/Not Spam, Yes/No, Fraud/Legitimate
+- Outputs probability between 0 and 1
+
+Ridge & Lasso: Improved Linear Regression
+- Prevents overfitting
+- More stable predictions
+- Lasso can select important features
+
+Each script creates visualizations to help you understand!
